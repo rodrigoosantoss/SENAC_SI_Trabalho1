@@ -1,9 +1,12 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const userRoutes = require('./routes/usuario-routes')
+const cors = require('cors');
 
 const app = express();
 const port = process.env.PORT || 9000;
+
+app.use(cors());
 
 //middleware
 app.use(express.json());
